@@ -1,3 +1,5 @@
+
+-- Prompt 2
 SELECT First_Name
 FROM users
 WHERE User_ID IN (

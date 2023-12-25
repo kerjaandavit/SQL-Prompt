@@ -1,11 +1,11 @@
--- Prompt 1
+-- Command 1
 SELECT post_id, (CAST(actions AS DECIMAL) / impressions * 100) AS popularity
 FROM linkedin_posts
 WHERE (CAST(actions AS DECIMAL) / impressions * 100) >= 1.0
 ORDER BY popularity DESC;
 
 
--- Prompt 2
+-- Command 2
 SELECT First_Name
 FROM users
 WHERE User_ID IN (
@@ -17,3 +17,12 @@ WHERE User_ID IN (
     )
 )
 ORDER BY First_Name;
+
+-- Command 3
+SELECT candidate_id
+FROM candidates
+WHERE sql_experience = 'X'
+  AND (python = 'X' OR r_programming = 'X')
+  AND problem_solving = 'X'
+  AND domain_knowledge = 'X'
+ORDER BY candidate_id;
